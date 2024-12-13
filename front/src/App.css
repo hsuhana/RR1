@@ -1,0 +1,609 @@
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+/*-------- Header-------- */
+nav {
+  background-color: #4d4c4c;
+  padding: 10px 20px;
+  padding-bottom: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li button{
+  background-color: #00000000;
+  border-style: none;
+}
+
+nav ul li a, nav ul li button {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1rem;
+}
+
+nav ul li a:hover, nav ul li button:hover {
+  color: #51c4f5;
+}
+
+/*-------- AuthStatus -------- */
+.userStatus{
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center;
+  padding-right: 3rem;
+}
+
+.userStatus > button {
+  margin-left: 0.4rem;
+  background-color: #00000000;
+  border-style: none;
+  border-bottom: solid 0.8px #ffed9a;
+  font-family: "Permanent Marker", cursive;
+  color: #ffed9a;
+  padding: 1px;
+  transition: color 0.3s ease;
+}
+
+.userStatus > button:hover{
+  color: #f59051;
+  border-bottom: solid 0.8px #f59051;
+}
+
+.userStatus p{
+  color: #ffed9a;
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/*-------- Footer-------- */
+footer {
+  background-color: #4d4c4c;
+  padding: 10px 20px;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: "Permanent Marker", cursive;
+}
+
+/*-------- Home page-------- */
+.home-page {
+  background-image: url('./images/ramen.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+}
+
+/*------- Register page------- */
+.register-page {
+  background-image: url('./images/ramen2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  overflow: auto;
+  font-family: "Permanent Marker", cursive;
+}
+
+.loginPage{
+  background-image: url('./images/loginBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  overflow: auto;
+  font-family: "Permanent Marker", cursive;
+  /* margin: 1rem; */
+}
+
+.register-container {
+  width: 60%;
+  margin: 3rem auto;
+  padding: 2rem;
+  /* border: 1px solid #ccc; */
+  border-radius: 1rem;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.4);
+  background-color: #f9f9f9b9;
+
+}
+
+.loginPage .register-container{
+  margin-top: 6rem;
+  margin-bottom: 0rem;
+}
+
+.register-container h1 {
+  text-align: center;
+  color: #947060;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.register-form input {
+  display: block;
+  height: 80%;
+  width: 80%;
+  margin: 0 auto 1rem auto;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  padding: 1rem;
+  background-color: #ffffff;
+  font-family: "Caveat", cursive;
+}
+
+.register-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.register-form button {
+  width: 80%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4e91ef;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Permanent Marker", cursive;
+}
+
+.register-form button:hover {
+  background-color: #0056b3;
+}
+
+
+/*------- Menu page------- */
+.menuBackgorund{
+  background-color: #000000;
+}
+
+.menuBackgorund h1{
+  padding: 5vw;
+  color: white;
+  background-color: #000000;
+  margin: 0vw;
+  font-family: "Permanent Marker", cursive;
+}
+
+.ramen_menu1, .ramen_menu2{
+  width: 100%;
+}
+
+.ramen_menu2{
+  margin-bottom: 4rem;
+}
+
+/*------- Member page------- */
+.body_reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box; 
+  padding-bottom: 0;
+
+}
+
+.reservation_background {
+  background-color: #534343b9;
+}
+
+.memberTitle{
+  font-family: "Permanent Marker", cursive;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.reservationTitle {
+  font-family: "Permanent Marker", cursive;
+  margin: 0;
+  padding-top: 30px;
+  color: #fff;
+}
+
+.reservation {
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Caveat", cursive;
+
+}
+
+.reservation_detail {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.btnCancel {
+  background-color: #427ddb;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 30px;
+  font-family: "Permanent Marker", cursive;
+
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Caveat", cursive;
+  }
+
+.memberSection {
+  background-image: url('./images/memberBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0 100px;
+}
+
+.btnEdit, .btnSave, .btnChange {
+  background-color: #606061;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 30px;
+  font-family: "Permanent Marker", cursive;
+
+}
+
+.btnCancel:hover, .btnEdit:hover, .btnSave:hover, .btnChange:hover {
+  background-color: #96969b;
+}
+
+label {
+  font-size: 1.5rem;
+  color: #555555;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+  margin-right: 5px;
+  margin-left: 50px;
+  font-family: "Caveat", cursive;
+
+}
+
+.labelDetails {
+  font-size: 1.5rem;
+  color: #555555;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+  margin-right: 5px;
+  margin-left: 30px;
+  font-family: "Caveat", cursive;
+
+}
+
+input {
+  padding: 10px 30px; 
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: 2px solid #97979b; 
+  background-color: transparent;
+  outline: none;
+  transition: border-bottom-color 0.3s ease;
+  display: block;
+  text-align: center;
+  margin-right: 5px;
+  font-family: "Caveat", cursive;
+
+}
+
+.input {
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: 2px solid #97979b; 
+  background-color: transparent;
+  outline: none;
+  transition: border-bottom-color 0.3s ease;
+  display: block;
+  text-align: center;
+  margin-right: 5px;
+  font-family: "Caveat", cursive;
+
+}
+
+.profile-edit-container, .details-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  padding: 20px 30px;
+  border: 2px solid #a7a6a9;
+  text-align: center;
+}
+
+.reservationTable {
+  font-family: "Caveat", cursive;
+  width: 70%;
+  max-width: 500px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reservationTable th {
+  padding: 5px 10px;
+}
+
+.reservationTable td {
+  padding: 0 10px;
+}
+
+.reservationTable thead {
+  background-color: #666766;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.reservationTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.reservationTable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.reservationTable tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.reservationTable tbody td {
+  color: #555;
+  font-size: 20px;
+}
+
+
+/*-------- ProgressBar -------- */
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  flex: 1; 
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 1; 
+}
+
+.circle.completed {
+  background-color: #ffb274;
+}
+
+.label {
+  margin-left: 0rem;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.label.active {
+  font-weight: bold;
+  color: #ffb274;
+}
+
+.connector {
+  position: absolute;
+  height: 4px;
+  width: 100px;
+  background-color: #ccc;
+  top: 24px;
+  left: 50%;
+  transform: translateX(25%);
+  z-index: 0;
+}
+
+.connector.completed {
+  background-color: #ffb274; 
+}
+
+/*-------- Reservation Date, Time, Guest, SpecialRequests Page -------- */
+.reservationPage{
+  background-image: url('./images/background.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -1.5rem;
+  padding: 0 2rem;
+}
+
+.progress-bar{
+  padding-top: 3rem;
+  font-family: "Caveat", cursive;
+}
+
+.dateSelection h1, .timeSelection h1, .guestSelection h1, .tableSelection h1{
+  font-family: "Permanent Marker", cursive;
+  color: #ffffff;
+}
+
+.datePickButton, .timePickButton, #tablePickButton{
+  font-family: "Permanent Marker", cursive;
+  border-style: none;
+  border: solid 2px #ffed9a;
+  background-color: #00000000;
+  margin: 1rem;
+  color: #ffed9a;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.datePickButton:hover, .timePickButton:hover, #tablePickButton:hover{
+  color: #f59051;
+  border: solid 2px #f59051;
+}
+
+.datePickButton.selected, .timePickButton.selected, #tablePickButton.selected {
+  background-color: #ff966a;
+  color: #ffffff; 
+  border-color: #ffb798;
+}
+
+.dataSubmit:disabled{
+  margin-top: 3rem;
+  padding: 0.8rem 2rem;
+  font-family: "Permanent Marker", cursive;
+  border-style: none;
+  border: solid 2px #cf92476f;
+  background-color: #00000000;
+  color: #cf92476f;
+  border-radius: 0.8rem;
+}
+
+.dataSubmit{
+  margin-top: 3rem;
+  padding: 0.8rem 2rem;
+  font-family: "Permanent Marker", cursive;
+  border-style: none;
+  border: solid 2px #ff746a;
+  background-color: #ff746a;
+  color: #ffffff;
+  border-radius: 0.8rem;
+}
+
+.dataSubmit:hover{
+  margin-top: 3rem;
+  padding: 0.8rem 2rem;
+  font-family: "Permanent Marker", cursive;
+  border-style: none;
+  border: solid 2px #a93f3f;
+  background-color: #a93f3f;
+  color: #ffffff;
+  border-radius: 0.8rem;
+}
+
+#guestNumber, .textArea{
+  display: block;
+  margin: 3rem auto 0.5rem auto;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  background-color: white;
+  
+}
+
+.reservationConfirm{
+  color: white;
+  font-family: "Caveat", cursive;
+}
+
+.reservationConfirm h1, .reservationConfirm strong{
+  font-family: "Permanent Marker", cursive;
+}
+
