@@ -23,6 +23,19 @@ var Member = require('../models/member');
 // Initialize app
 var app = express();
 
+// CORS setup
+//var cors = require('cors');
+//app.use(cors());
+var cors = require('cors');
+
+// CORS configuration
+app.use(cors({
+  origin: 'https://rr-1-uwof.vercel.app',  // Replace with your frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],  // Add any other headers if necessary
+  credentials: true, // Allow credentials (cookies or authorization headers)
+}));
+
 // Set up middleware
 app.use(logger('dev'));
 app.use(express.json());
@@ -53,9 +66,6 @@ app.use('/members', membersRouter);
 app.use('/reservations', reservationRouter);
 app.use('/auth', authRouter);
 
-// CORS setup
-var cors = require('cors');
-app.use(cors());
 
 // Connect to MongoDB
 mongoose.connect(configs.ConnectionStrings.MongoDB)
