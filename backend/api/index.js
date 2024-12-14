@@ -37,6 +37,15 @@ app.use(cors({
   credentials: true, // Allow credentials (cookies or authorization headers)
 }));
 
+//Handle preflight requests manually if needed
+app.options('*', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://rr-1-uwof.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.sendStatus(200);  // Respond with 200 OK for preflight requests
+});
+
 // Set up middleware
 app.use(logger('dev'));
 app.use(express.json());
