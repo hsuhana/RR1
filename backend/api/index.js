@@ -12,6 +12,8 @@ var MongoStore = require('connect-mongo');
 var http = require("http");
 var debug = require("debug")("backend:server");
 
+
+
 // Import routes
 var indexRouter = require('../routes/index');
 var membersRouter = require('../routes/members');
@@ -92,6 +94,7 @@ app.use('/members', membersRouter);
 app.use('/reservations', reservationRouter);
 app.use('/auth', authRouter);
 
+require('dotenv').config();
 
 // Connect to MongoDB
 mongoose.connect(configs.ConnectionStrings.MongoDB)
