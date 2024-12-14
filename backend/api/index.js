@@ -40,8 +40,8 @@ app.use(cors({
 //Handle preflight requests manually if needed
 app.options('*', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://rr-1-uwof.vercel.app');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.sendStatus(200);  // Respond with 200 OK for preflight requests
 });
@@ -57,7 +57,7 @@ app.use(session({
   saveUninitialized: false,
   store: MongoStore.create({ mongoUrl: process.env.CONNECTION_STRING_MONGODB }),
   cookie: {
-    secure: false,
+    secure: true,
     maxAge: 24 * 60 * 60 * 1000, // 1 day
   },
 }));
