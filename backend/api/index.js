@@ -51,14 +51,26 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+// app.use(session({
+//   secret: "secretSession",
+//   resave: false,
+//   saveUninitialized: false,
+//   store: MongoStore.create({ mongoUrl: process.env.CONNECTION_STRING_MONGODB }),
+//   cookie: {
+//     secure: true,
+//     maxAge: 24 * 60 * 60 * 1000, // 1 day
+//   },
+// }));
 app.use(session({
   secret: "secretSession",
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({ mongoUrl: process.env.CONNECTION_STRING_MONGODB }),
   cookie: {
-    secure: true,
-    maxAge: 24 * 60 * 60 * 1000, // 1 day
+    secure: isProduction,   // Use secure cookies only in production
+    httpOnly: true,
+    maxAge: 24 * 60 * 60 * 1000,  // 1 day
+    sameSite: isProduction ? 'None' : 'Lax',  // 'None' for cross-site cookies
   },
 }));
 
