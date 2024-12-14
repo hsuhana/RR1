@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
 
+    const apiUrl = process.env.REACT_APP_API_URL || '';
+
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -24,7 +26,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const response = await axios.post('/register', formData);
+            const response = await axios.post(`${apiUrl}/register`, formData);
             alert(response.data.message);
             navigate("/login");
         }catch (error) {
